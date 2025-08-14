@@ -56,12 +56,18 @@ export default function RegisterPage() {
             </div>
             <div className="space-y-2">
               <Label htmlFor="phone">Phone Number</Label>
-              <Input
-                id="phone"
-                type="tel"
-                placeholder="+1 555-555-5555"
-                required
-              />
+              <div className="flex items-center">
+                <span className="flex h-10 items-center rounded-l-md border border-r-0 border-input bg-secondary px-3 text-sm text-muted-foreground">
+                  +91
+                </span>
+                <Input
+                  id="phone"
+                  type="tel"
+                  placeholder="98765 43210"
+                  required
+                  className="rounded-l-none"
+                />
+              </div>
             </div>
             <Button type="submit" className="w-full">
               Create account
