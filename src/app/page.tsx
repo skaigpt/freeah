@@ -45,31 +45,19 @@ export default function LoginPage() {
           </div>
           <CardTitle>Welcome to ஃப்ரீயா</CardTitle>
           <CardDescription>
-            Enter your email below to login to your account
+            Enter your phone number below to login
           </CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleLogin} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="phone">Phone Number</Label>
               <Input
-                id="email"
-                type="email"
-                placeholder="m@example.com"
+                id="phone"
+                type="tel"
+                placeholder="+1 555-555-5555"
                 required
               />
-            </div>
-            <div className="space-y-2">
-               <div className="flex items-center justify-between">
-                <Label htmlFor="password">Password</Label>
-                <Link
-                  href="#"
-                  className="text-sm underline"
-                >
-                  Forgot your password?
-                </Link>
-              </div>
-              <Input id="password" type="password" required />
             </div>
             <Button type="submit" className="w-full">
               Login

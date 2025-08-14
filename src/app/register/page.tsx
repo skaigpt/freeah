@@ -55,17 +55,13 @@ export default function RegisterPage() {
               <Input id="full-name" placeholder="John Doe" required />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="phone">Phone Number</Label>
               <Input
-                id="email"
-                type="email"
-                placeholder="m@example.com"
+                id="phone"
+                type="tel"
+                placeholder="+1 555-555-5555"
                 required
               />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="password">Password</Label>
-              <Input id="password" type="password" required />
             </div>
             <Button type="submit" className="w-full">
               Create account
