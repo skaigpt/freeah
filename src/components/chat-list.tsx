@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Search, LogOut, Settings } from "lucide-react";
@@ -15,8 +16,19 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export function ChatList() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null;
+  }
+
   return (
     <div className="flex h-full flex-col">
       <div className="sticky top-0 z-10 border-b bg-sidebar p-4">
