@@ -109,6 +109,54 @@ export const messages: Message[] = [
     text: "How about a hike? The weather is supposed to be great.",
     timestamp: "10:33 AM",
   },
+  {
+    id: "msg5",
+    senderId: "user2",
+    text: "That's a great idea! I'm in. What time should we meet?",
+    timestamp: "10:34 AM",
+  },
+  {
+    id: "msg6",
+    senderId: "user1",
+    text: "Let's say 9 AM at the trailhead. Does that work for you?",
+    timestamp: "10:35 AM",
+  },
+  {
+    id: "msg7",
+    senderId: "user2",
+    text: "Perfect! I'll bring some snacks.",
+    timestamp: "10:36 AM",
+  },
+  {
+    id: "msg8",
+    senderId: "user1",
+    text: "Awesome! Looking forward to it.",
+    timestamp: "10:37 AM",
+  },
+  {
+    id: 'msg9',
+    senderId: 'user2',
+    text: 'Btw, did you see the latest news about the new AI model?',
+    timestamp: '11:05 AM',
+  },
+  {
+    id: 'msg10',
+    senderId: 'user1',
+    text: 'No, I missed it. Anything interesting?',
+    timestamp: '11:06 AM',
+  },
+  {
+    id: 'msg11',
+    senderId: 'user2',
+    text: "It's supposed to be revolutionary. It can generate code from natural language prompts.",
+    timestamp: '11:07 AM',
+  },
+  {
+    id: 'msg12',
+    senderId: 'user1',
+    text: "Wow, that's incredible. We should try it out for our project.",
+    timestamp: '11:08 AM',
+  },
 ];
 
 export const chats: Chat[] = [
@@ -116,8 +164,8 @@ export const chats: Chat[] = [
     id: "chat1",
     users: [users[1], loggedInUser],
     messages: messages,
-    lastMessage: "How about a hike? The weather is supposed to be great.",
-    lastMessageTimestamp: "10:33 AM",
+    lastMessage: "Wow, that's incredible. We should try it out for our project.",
+    lastMessageTimestamp: "11:08 AM",
     unreadCount: 2,
     pinned: true,
     muted: true,
