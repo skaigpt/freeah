@@ -1,3 +1,4 @@
+
 export type User = {
   id: string;
   name: string;
@@ -18,4 +19,7 @@ export type Chat = {
   messages: Message[];
   lastMessage: string;
   lastMessageTimestamp: string;
+  unreadCount: number;
+  pinned: boolean;
+  muted: boolean;
 };

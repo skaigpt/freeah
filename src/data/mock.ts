@@ -1,3 +1,4 @@
+
 import type { User, Message, Chat } from "@/lib/types";
 
 export const loggedInUser: User = {
@@ -32,6 +33,12 @@ export const users: User[] = [
     name: "Diana",
     avatar: "https://placehold.co/100x100.png",
     online: false,
+  },
+  {
+    id: "user6",
+    name: "TechM Friends",
+    avatar: "https://placehold.co/100x100.png",
+    online: true,
   },
 ];
 
@@ -69,6 +76,9 @@ export const chats: Chat[] = [
     messages: messages,
     lastMessage: "How about a hike? The weather is supposed to be great.",
     lastMessageTimestamp: "10:33 AM",
+    unreadCount: 2,
+    pinned: true,
+    muted: true,
   },
   {
     id: "chat2",
@@ -76,6 +86,9 @@ export const chats: Chat[] = [
     messages: [],
     lastMessage: "Sounds good, let's catch up then.",
     lastMessageTimestamp: "Yesterday",
+    unreadCount: 0,
+    pinned: true,
+    muted: false,
   },
   {
     id: "chat3",
@@ -83,6 +96,9 @@ export const chats: Chat[] = [
     messages: [],
     lastMessage: "Can you send me the file?",
     lastMessageTimestamp: "3 days ago",
+    unreadCount: 1,
+    pinned: false,
+    muted: true,
   },
   {
     id: "chat4",
@@ -90,5 +106,18 @@ export const chats: Chat[] = [
     messages: [],
     lastMessage: "Happy Birthday! 🎉",
     lastMessageTimestamp: "1/15/24",
+    unreadCount: 0,
+    pinned: false,
+    muted: false,
+  },
+  {
+    id: "chat5",
+    users: [users[5], loggedInUser],
+    messages: [],
+    lastMessage: "Anybody saw the movie yet?",
+    lastMessageTimestamp: "9:43 AM",
+    unreadCount: 2,
+    pinned: false,
+    muted: true,
   },
 ];
