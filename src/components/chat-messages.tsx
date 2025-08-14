@@ -30,7 +30,7 @@ export function ChatMessages({ messages, currentUser, otherUser }: ChatMessagesP
     }, [messages]);
 
   return (
-    <div className="relative flex-1 bg-muted/40">
+    <div className="relative flex-1 overflow-y-auto bg-muted/40">
       <ScrollArea className="absolute inset-0" ref={scrollAreaRef}>
         <div className="p-4">
             <div className="mb-4 flex justify-center">
