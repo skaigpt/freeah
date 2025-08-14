@@ -7,21 +7,24 @@ import { ChatMessages } from "@/components/chat-messages";
 import { ChatInput } from "@/components/chat-input";
 import { chats, loggedInUser } from "@/data/mock";
 import type { Message, Chat } from "@/lib/types";
-import { notFound } from "next/navigation";
+import { notFound, useParams } from "next/navigation";
 
-export default function ChatPage({ params }: { params: { chatId: string } }) {
+export default function ChatPage() {
+  const params = useParams();
+  const chatId = params.chatId as string;
+
   const [isClient, setIsClient] = useState(false);
   const [selectedChat, setSelectedChat] = useState<Chat | undefined>(undefined);
   const [messages, setMessages] = useState<Message[]>([]);
 
   useEffect(() => {
     setIsClient(true);
-    const chat = chats.find((c) => c.id === params.chatId);
+    const chat = chats.find((c) => c.id === chatId);
     setSelectedChat(chat);
     if (chat) {
         setMessages(chat.messages);
     }
-  }, [params.chatId]);
+  }, [chatId]);
 
   if (!isClient) {
     return null; // or a loading skeleton
