@@ -39,12 +39,12 @@ export default function RegisterPage() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleRegister} className="grid gap-4">
-            <div className="grid gap-2">
+          <form onSubmit={handleRegister} className="space-y-4">
+            <div className="space-y-2">
               <Label htmlFor="full-name">Full Name</Label>
               <Input id="full-name" placeholder="John Doe" required />
             </div>
-            <div className="grid gap-2">
+            <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
               <Input
                 id="email"
@@ -53,7 +53,7 @@ export default function RegisterPage() {
                 required
               />
             </div>
-            <div className="grid gap-2">
+            <div className="space-y-2">
               <Label htmlFor="password">Password</Label>
               <Input id="password" type="password" required />
             </div>
