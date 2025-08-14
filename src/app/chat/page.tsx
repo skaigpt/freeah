@@ -1,6 +1,7 @@
+
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChatTopbar } from "@/components/chat-topbar";
 import { ChatMessages } from "@/components/chat-messages";
 import { ChatInput } from "@/components/chat-input";
@@ -10,6 +11,12 @@ import type { Message } from "@/lib/types";
 export default function ChatPage() {
   const [selectedChat] = useState(chats[0]);
   const [messages, setMessages] = useState<Message[]>(selectedChat.messages);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const otherUser = selectedChat.users.find(u => u.id !== loggedInUser.id)!;
 
   const handleSendMessage = (text: string) => {
@@ -21,6 +28,10 @@ export default function ChatPage() {
     };
     setMessages(prev => [...prev, newMessage]);
   };
+
+  if (!isClient) {
+    return null;
+  }
 
   return (
     <div className="flex h-full flex-col">
