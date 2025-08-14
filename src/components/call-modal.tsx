@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Mic, MicOff, Video, VideoOff, Phone, PhoneOff } from "lucide-react";
 import {
   Dialog,
@@ -28,12 +28,12 @@ export function CallModal({ isOpen, onClose, callType, user }: CallModalProps) {
   );
 
   // Simulate call being answered after a few seconds
-  useState(() => {
+  useEffect(() => {
     if (isOpen) {
       const timer = setTimeout(() => setCallStatus("answered"), 3000);
       return () => clearTimeout(timer);
     }
-  });
+  }, [isOpen]);
 
   const handleClose = () => {
     setCallStatus("ringing");
