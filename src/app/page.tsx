@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -32,7 +33,7 @@ export default function LoginPage() {
               <MessageSquareText className="size-8 text-primary-foreground" />
             </div>
           </div>
-          <CardTitle className="text-2xl font-bold">Welcome to ஃப்ரீயா</CardTitle>
+          <CardTitle>Welcome to ஃப்ரீயா</CardTitle>
           <CardDescription>
             Enter your email below to login to your account
           </CardDescription>
@@ -49,7 +50,7 @@ export default function LoginPage() {
               />
             </div>
             <div className="grid gap-2">
-              <div className="flex items-center">
+              <div className="flex items-center justify-between">
                 <Label htmlFor="password">Password</Label>
                 <Link
                   href="#"

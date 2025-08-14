@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -32,7 +33,7 @@ export default function RegisterPage() {
               <MessageSquareText className="size-8 text-primary-foreground" />
             </div>
           </div>
-          <CardTitle className="text-2xl font-bold">Create an Account</CardTitle>
+          <CardTitle>Create an Account</CardTitle>
           <CardDescription>
             Enter your information to create an account
           </CardDescription>
